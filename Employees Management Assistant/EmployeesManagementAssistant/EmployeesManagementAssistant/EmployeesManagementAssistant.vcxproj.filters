@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{2661007c-f33d-4af5-bae3-4a9a37fa06b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataAccess">
+      <UniqueIdentifier>{4d07bbf1-b2dd-4463-98f4-edc882f91306}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataAccess\DataAccessors">
+      <UniqueIdentifier>{297852b0-3830-4d06-a52e-3ac6e71b1d40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataAccess\TablesAccessors">
+      <UniqueIdentifier>{c793d246-f3b6-4fb6-83cd-9ae3ebf7ed33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{89536c1d-0cbf-47c0-b1af-28e626a526ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataAccess">
+      <UniqueIdentifier>{852ae37c-c282-4ed1-b433-814643ab47e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Documents">
+      <UniqueIdentifier>{0107f1dd-a6c2-4483-8794-5ebe7decb6e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Views">
+      <UniqueIdentifier>{5b30c6bb-7b90-4237-8e2e-698593ff9bb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataAccess\DataAccessors">
+      <UniqueIdentifier>{cf36b2c6-05ea-476f-9cae-e79b14ceee54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataAccess\TablesAccessors">
+      <UniqueIdentifier>{47c7fdd8-5ddc-49da-a767-0dfb674204f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Documents">
+      <UniqueIdentifier>{b739ef51-3ac4-460d-9063-86cc80569664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Views">
+      <UniqueIdentifier>{8d540c1e-1972-4e1a-a35c-e7869791cce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Dialogs">
+      <UniqueIdentifier>{89396761-e1ca-456c-a555-67348460b656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs">
+      <UniqueIdentifier>{9e6518ec-a37b-4519-96fb-eab8311f9d2d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EmployeesManagementAssistant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartArray.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartMap.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Messages.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeesData.h">
+      <Filter>Header Files\DataAccess\DataAccessors</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeesTableAccessor.h">
+      <Filter>Header Files\DataAccess\TablesAccessors</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeesView.h">
+      <Filter>Header Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeesDocument.h">
+      <Filter>Header Files\Documents</Filter>
+    </ClInclude>
+    <ClInclude Include="DatabaseAccessor.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartTable.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartDocument.h">
+      <Filter>Header Files\Documents</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartDataAccessor.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeesDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartView.h">
+      <Filter>Header Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Employees.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CurrentUser.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvertToString.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTime.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskPriorities.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskStates.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="Tasks.h">
+      <Filter>Header Files\DataAccess</Filter>
+    </ClInclude>
+    <ClInclude Include="TasksTableAccessor.h">
+      <Filter>Header Files\DataAccess\TablesAccessors</Filter>
+    </ClInclude>
+    <ClInclude Include="TasksData.h">
+      <Filter>Header Files\DataAccess\DataAccessors</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskStatesData.h">
+      <Filter>Header Files\DataAccess\DataAccessors</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskPrioritiesData.h">
+      <Filter>Header Files\DataAccess\DataAccessors</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskPrioritiesTableAccessor.h">
+      <Filter>Header Files\DataAccess\TablesAccessors</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskStatesTableAccessor.h">
+      <Filter>Header Files\DataAccess\TablesAccessors</Filter>
+    </ClInclude>
+    <ClInclude Include="TasksDocument.h">
+      <Filter>Header Files\Documents</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskStatesDocument.h">
+      <Filter>Header Files\Documents</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskPrioritiesDocument.h">
+      <Filter>Header Files\Documents</Filter>
+    </ClInclude>
+    <ClInclude Include="TasksView.h">
+      <Filter>Header Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="TasksDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskPrioritiesView.h">
+      <Filter>Header Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskPrioritiesDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskStatesView.h">
+      <Filter>Header Files\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskStatesDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Encryption.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TasksArchiveData.h">
+      <Filter>Header Files\DataAccess\DataAccessors</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EmployeesManagementAssistant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeesData.cpp">
+      <Filter>Source Files\DataAccess\DataAccessors</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeesTableAccessor.cpp">
+      <Filter>Source Files\DataAccess\TablesAccessors</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeesView.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeesDocument.cpp">
+      <Filter>Source Files\Documents</Filter>
+    </ClCompile>
+    <ClCompile Include="DatabaseAccessor.cpp">
+      <Filter>Source Files\DataAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeesDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="CurrentUser.cpp">
+      <Filter>Source Files\DataAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="Employees.cpp">
+      <Filter>Source Files\DataAccess</Filter>
+    </ClCompile>
+    <ClCompile Include="TasksTableAccessor.cpp">
+      <Filter>Source Files\DataAccess\TablesAccessors</Filter>
+    </ClCompile>
+    <ClCompile Include="TasksData.cpp">
+      <Filter>Source Files\DataAccess\DataAccessors</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskStatesData.cpp">
+      <Filter>Source Files\DataAccess\DataAccessors</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPrioritiesData.cpp">
+      <Filter>Source Files\DataAccess\DataAccessors</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskStatesTableAccessor.cpp">
+      <Filter>Source Files\DataAccess\TablesAccessors</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPrioritiesTableAccessor.cpp">
+      <Filter>Source Files\DataAccess\TablesAccessors</Filter>
+    </ClCompile>
+    <ClCompile Include="TasksDocument.cpp">
+      <Filter>Source Files\Documents</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskStatesDocument.cpp">
+      <Filter>Source Files\Documents</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPrioritiesDocument.cpp">
+      <Filter>Source Files\Documents</Filter>
+    </ClCompile>
+    <ClCompile Include="TasksView.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="TasksDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPrioritiesView.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPrioritiesDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskStatesView.cpp">
+      <Filter>Source Files\Views</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskStatesDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TasksArchiveData.cpp">
+      <Filter>Source Files\DataAccess\DataAccessors</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EmployeesManagementAssistant.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\EmployeesManagementAssistant.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\EmployeesManagementAssistantDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\EmployeesManagementAssistant.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\EmployeesManagementAssistantLogo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

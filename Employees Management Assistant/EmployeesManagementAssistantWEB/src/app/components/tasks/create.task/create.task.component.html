@@ -1,0 +1,21 @@
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form class="was-validated" #form="ngForm" (ngSubmit)="createTask()">
+                <div class="mb-3">
+                    <label class="form-label text-primary" for="name">Име на задачата</label>
+                    <input type="text" required class="form-control text-primary" id="name" name="name" [(ngModel)] = "task.name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary" for="description">Описание</label>
+                    <textarea type="text" class="form-control text-primary" id="description" name="description" [(ngModel)] = "task.description"></textarea>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-primary" *ngIf="isDataValid()">Запази</button>
+                    <button type="button" class="btn btn-primary" (click)="onCancel()">Отказ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

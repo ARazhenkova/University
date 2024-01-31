@@ -1,0 +1,133 @@
+
+/****************************************************************
+-- DESCRIPTION: Изтривне на вече съществуващите таблици.
+****************************************************************/
+
+IF EXISTS (SELECT * FROM SYS.TABLES WHERE [NAME] = 'TASKS_ARCHIVE')
+	DROP TABLE [TASKS_ARCHIVE]
+GO
+
+IF EXISTS (SELECT * FROM SYS.TABLES WHERE [NAME] = 'TASKS')
+	DROP TABLE [TASKS]
+
+IF EXISTS (SELECT * FROM SYS.TABLES WHERE [NAME] = 'TASK_PRIORITIES')
+	DROP TABLE [TASK_PRIORITIES]
+
+IF EXISTS (SELECT * FROM SYS.TABLES WHERE [NAME] = 'TASK_STATES')
+	DROP TABLE [TASK_STATES]
+
+IF EXISTS (SELECT * FROM SYS.TABLES WHERE [NAME] = 'EMPLOYEES')
+	DROP TABLE [EMPLOYEES]
+GO
+
+/****************************************************************
+-- DESCRIPTION: Създаване на таблица за служители.
+****************************************************************/
+
+CREATE TABLE [EMPLOYEES]
+(  
+	[ID]								INT				NOT NULL	IDENTITY(1,1),
+	[UPDATE_COUNTER]					INT				NOT NULL,
+	-------------------------------------------------------------
+	[PERSONAL_KEY]						NVARCHAR(17)	NOT NULL,
+	[STATUS_ID]							INT				NOT NULL,
+	[ACCESS_LEVEL]						TINYINT			NOT NULL,
+	[PASSWORD]							NVARCHAR(257)	NOT NULL,
+	[FAILED_LOGIN_ATTEMPTS_COUNTER]		TINYINT			NOT NULL, 
+	-------------------------------------------------------------
+	[FIRST_NAME]						NVARCHAR(65)	NOT NULL,
+	[MIDDLE_NAME]						NVARCHAR(65)	NOT NULL, 
+	[LAST_NAME]							NVARCHAR(65)	NOT NULL, 
+	[IDENTIFIER]						NVARCHAR(11)	NOT NULL, 
+	[SALARY]							FLOAT			NOT NULL,
+
+	[PERSONAL_PHONE_NUMBER]				NVARCHAR(16)	NOT NULL,
+	[BUSINESS_PHONE_NUMBER]				NVARCHAR(16)	NOT NULL,
+
+	[EMAIL_ADDRESS]						NVARCHAR(257)	NOT NULL,
+
+	[HOME_ADDRESS]						NVARCHAR(257)	NOT NULL,
+	[WORK_ADDRESS]						NVARCHAR(257)	NOT NULL,
+
+	CONSTRAINT [PK_EMPLOYEES_ID] PRIMARY KEY CLUSTERED(ID),
+	CONSTRAINT [AK_EMPLOYEES_IDENTIFIER] UNIQUE(IDENTIFIER)
+)
+GO
+
+/****************************************************************
+-- DESCRIPTION: Създаване на таблица за приоритети на задача.
+****************************************************************/
+
+CREATE TABLE [TASK_PRIORITIES]
+(  
+	[ID]				INT				NOT NULL	IDENTITY(1,1),
+	[UPDATE_COUNTER]	INT				NOT NULL,
+	[NAME]				NVARCHAR(65)	NOT NULL,
+	[LEVEL]				SMALLINT		NOT NULL,
+
+	CONSTRAINT [PK_TASK_PRIORITIES_ID] PRIMARY KEY CLUSTERED(ID)
+)
+GO
+
+/****************************************************************
+-- DESCRIPTION: Създаване на таблица за състояние на задача.
+****************************************************************/
+
+CREATE TABLE [TASK_STATES]
+(  
+	[ID]				INT				NOT NULL	IDENTITY(1,1),
+	[UPDATE_COUNTER]	INT				NOT NULL,
+	[NAME]				NVARCHAR(65)	NOT NULL,
+	[IS_FOR_ARCHIVE]	TINYINT			NOT NULL,
+
+	CONSTRAINT [PK_TASK_STATES_ID] PRIMARY KEY CLUSTERED(ID)
+)
+GO
+
+/****************************************************************
+-- DESCRIPTION: Създаване на таблица за задачи.
+****************************************************************/
+
+CREATE TABLE [TASKS]
+(  
+	[ID]				INT				NOT NULL	IDENTITY(1,1),
+	[UPDATE_COUNTER]	INT				NOT NULL,
+	[NAME]				NVARCHAR(64)	NOT NULL,
+	[PRIORITY_ID]		INT				NOT NULL,
+	[STATE_ID]			INT				NOT NULL,
+	[ASSIGN_FROM_ID]	INT				NOT NULL,
+	[ASSIGN_TO_ID]		INT				NOT NULL,
+	[DESCRIPTION]		NVARCHAR(513)	NOT NULL,
+
+	CONSTRAINT [PK_TASKS_ID] PRIMARY KEY CLUSTERED([ID]),
+
+	CONSTRAINT [FK_TASKS_STATE_ID]			FOREIGN KEY([STATE_ID])			REFERENCES [TASK_STATES]([ID]),
+	CONSTRAINT [FK_TASKS_PRIORITY_ID]		FOREIGN KEY([PRIORITY_ID])		REFERENCES [TASK_PRIORITIES]([ID]),
+	CONSTRAINT [FK_TASKS_ASSIGN_FROM_ID]	FOREIGN KEY([ASSIGN_FROM_ID])	REFERENCES [EMPLOYEES]([ID]),
+	CONSTRAINT [FK_TASKS_ASSIGN_TO_ID]		FOREIGN KEY([ASSIGN_TO_ID])		REFERENCES [EMPLOYEES]([ID])
+)
+GO
+
+/****************************************************************
+-- DESCRIPTION: Създаване на таблица за история на задачите.
+****************************************************************/
+
+CREATE TABLE [TASKS_ARCHIVE]
+(  
+	[ID]				INT				NOT NULL	IDENTITY(1,1),
+	[UPDATE_COUNTER]	INT				NOT NULL,
+	[NAME]				NVARCHAR(64)	NOT NULL,
+	[PRIORITY_ID]		INT				NOT NULL,
+	[STATE_ID]			INT				NOT NULL,
+	[ASSIGN_FROM_ID]	INT				NOT NULL,
+	[ASSIGN_TO_ID]		INT				NOT NULL,
+	[DESCRIPTION]		NVARCHAR(513)	NOT NULL,
+
+	CONSTRAINT [PK_TASKS_ARCHIVE_ID] PRIMARY KEY CLUSTERED([ID]),
+
+	CONSTRAINT [FK_TASKS_ARCHIVE_STATE_ID]			FOREIGN KEY([STATE_ID])			REFERENCES [TASK_STATES]([ID]),
+	CONSTRAINT [FK_TASKS_ARCHIVE_PRIORITY_ID]		FOREIGN KEY([PRIORITY_ID])		REFERENCES [TASK_PRIORITIES]([ID]),
+	CONSTRAINT [FK_TASKS_ARCHIVE_ASSIGN_FROM_ID]	FOREIGN KEY([ASSIGN_FROM_ID])	REFERENCES [EMPLOYEES]([ID]),
+	CONSTRAINT [FK_TASKS_ARCHIVE_ASSIGN_TO_ID]		FOREIGN KEY([ASSIGN_TO_ID])		REFERENCES [EMPLOYEES]([ID])
+)
+GO

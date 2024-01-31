@@ -1,0 +1,20 @@
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <form class="was-validated" #form="ngForm" (ngSubmit)="login(user)">
+                <div class="mb-3">
+                    <label class="form-label text-primary" for="username">Потребителско име</label>
+                    <input required type="text" class="form-control text-primary" id="username" name="username" [(ngModel)] = "user.username">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label text-primary" for="password">Парола</label>
+                    <input required type="password" class="form-control text-primary" id="password" name="password" [(ngModel)] = "user.password">
+                </div>
+                <div class="mb-3 text-danger" *ngIf="!isExistingUser">Невалидно потребителско име или парола</div>
+                <div class="d-grid gap-2 col mx-auto">
+                    <button type="submit" class="btn btn-primary" *ngIf="isDataValid()">Вход</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
