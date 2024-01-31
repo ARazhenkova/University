@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Employees Management Assistant/EmployeesManagementAssistant/.vs/EmployeesManagementAssistant/FileContentIndex
+/Employees Management Assistant/EmployeesManagementAssistant/.vs/EmployeesManagementAssistant/v14
+/Employees Management Assistant/EmployeesManagementAssistant/.vs/EmployeesManagementAssistant
+/Employees Management Assistant/EmployeesManagementAssistant/EmployeesManagementAssistant.VC.db
+/Employees Management Assistant/EmployeesManagementAssistantService/.vs
+/Employees Management Assistant/EmployeesManagementAssistantService/EmployeesManagementAssistantService/obj/Debug/net6.0
